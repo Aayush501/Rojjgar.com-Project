@@ -7,7 +7,7 @@ document.getElementById('f2').addEventListener('submit', async (e) => {
     const password = userPassword.value;
 
     try {
-        const response = await axios.post('http://localhost:3000/users/loginbyemail', {
+        const response = await axios.post('https://rojjgar-com.onrender.com/users/loginbyemail', {
             email : email,
             password : password
         });
@@ -33,7 +33,7 @@ document.getElementById('f3').addEventListener('submit', async (e) => {
     const password = userPassword.value;
 
     try {
-        const response = await axios.post('http://localhost:3000/users/loginbycontact', {
+        const response = await axios.post('https://rojjgar-com.onrender.com/users/loginbycontact', {
             contact : contact,
             password : password
         });
@@ -64,7 +64,7 @@ document.getElementById('f4').addEventListener('submit', async (e) => {
     const councellor = document.getElementById('usercncl4').value;
 
     try{
-        const response = await axios.post('http://localhost:3000/users/adduser', {
+        const response = await axios.post('https://rojjgar-com.onrender.com/users/adduser', {
             name : name,
             password : password,
             contact : contact,
@@ -95,7 +95,7 @@ document.getElementById('f5').addEventListener('submit', async (e) => {
     const password = document.getElementById('jspass5').value;
 
     try {
-        const response = await axios.post('http://localhost:3000/jobseekers/login', {
+        const response = await axios.post('https://rojjgar-com.onrender.com/jobseekers/login', {
             id : id,
             password : password
         });
@@ -125,7 +125,7 @@ document.getElementById('f6').addEventListener('submit', async (e) => {
     const councellor = document.getElementById('jscncl4').value;
 
     try{
-        const response = await axios.post('http://localhost:3000/jobseekers/addjobseeker', {
+        const response = await axios.post('https://rojjgar-com.onrender.com/jobseekers/addjobseeker', {
             name : name,
             password : password,
             contact : contact,

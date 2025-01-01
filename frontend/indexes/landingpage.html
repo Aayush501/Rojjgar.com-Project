@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rojjgar.com</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/utility.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <section class="top-section">
+        <nav class="navbar grid">
+            <div class="nav1c ct-b wh">
+                <h1><u><b>Rojjgar.com</b></u></h1>
+            </div>
+            <div class="nav2c"></div>
+            <div class="nav3c flex ct-f">
+                <button class="btn b shd" id="lub" onclick=showUserLoginForm()>Login as User</button>
+                <button class="btn b shd" id="sub" onclick=showUserSignupForm()>Signup as User</button>
+                <button class="btn b shd" id="luj" onclick=showSeekerLoginForm()>Login as Job Seeker</button>
+                <button class="btn b shd" id="suj" onclick=showSeekerSignupForm()>Signup as Job Seeker</button>
+            </div>
+        </nav> 
+        <div class="img-fms">
+            <div class="img rlt">
+                <div class="fms abs">
+                    <div class="fmc bob dn" id="frm-ctnr">
+                        <div class="flex ct-f lg1f frm1 " id="f1">
+                            <button class="fbtn b shd bob" id="lueb" onclick=showUserLoginWithEmailForm()>Login Using Email</button>
+                            <button class="fbtn b shd bob" id="lucb" onclick=showUserLoginWithContactForm()>Login Using Contact</button>
+                        </div>
+                        <form class="frm2 dn" id="f2">
+                            <label for="useremail2" class="flb b">Email:</label>
+                            <br>
+                            <input type="email" id="useremail2" name="useremail" class="finp bob shd" />
+                            <br><br>
+                            <label for="userpass2" class="flb b">Password:</label>
+                            <br>
+                            <input type="password" id="userpass2" name="userpassword" class="finp bob shd" />
+                            <br><br>
+                            <button class="fbtn b shd bob" id="f2s" type="submit">Submit</button>
+                            <button type="button" class="close-button orange b" id="cl-b2" onclick=closeButton()>&times;</button>
+                            <button type="button" class="close-button orange b" id="cl-r2" onclick=returnButton()>&#8630;</button>
+                        </form>
+                        <form action="" class="frm3 dn" id="f3">
+                            <label for="usercontact3" class="flb b">Contact</label>
+                            <br>
+                            <input type="tel" id="usercontact3" name="usercontact" class="finp bob shd" />
+                            <br><br>
+                            <label for="userpassc3" class="flb b">Password:</label>
+                            <br>
+                            <input type="password" id="userpassc3" name="userpassword" class="finp bob shd" />
+                            <br><br>
+                            <button class="fbtn b shd bob" id="f3s" type="submit">Submit</button>
+                            <button class="close-button orange b" id="cl-b3" onclick=closeButton()>&times;</button>
+                            <button type="button" class="close-button orange b" id="cl-r3" onclick=returnButton()>&#8630;</button>
+                        </form>
+                        <form action="" class="frm4 dn" id="f4">
+                            <label for="username4" class="b">Name:</label>
+                            <input type="text" id="username4" name="username" class="finp1 bob shd" />
+                            <br><br>
+                            <label for="usercontact4" class="b">Contact:</label>
+                            <input type="tel" id="usercontact4" name="usercontact" class="finp1 bob shd" />
+                            <label for="useremail4" class="b">Email:</label>
+                            <input type="email" id="useremail4" name="useremail4" class="finp1 bob shd" />
+                            <br><br>
+                            <label for="userpassc4" class="b">Password:</label>
+                            <input type="password" id="userpassc4" name="userpassword4" class="finp1 bob shd" />
+                            <br><br>
+                            <label for="userstate4" class="b">State:</label>
+                            <input type="text" id="userstate4" name="userstate4" class="finp1 bob shd">
+                            <label for="userdist4" class="b">District:</label>
+                            <input type="text" id="userdist4" name="userdist" class="finp1 bob shd">
+                            <br><br>
+                            <label for="userct4" class="b">City:</label>
+                            <input type="text" id="userct4" name="userct4" class="finp1 bob shd">
+                            <label for="userpn4" class="b">Pincode:</label>
+                            <input type="text" id="userpn4" name="userpn4" class="finp1 bob shd">
+                            <br><br>
+                            <label for="usercncl4" class="b">Councellor:</label>
+                            <input type="text" id="usercncl4" name="usercncl4" class="finp1 bob shd">
+                            <br><br>
+                            <button class="btn b shd bob" id="f4s" type="submit">Submit</button>
+                            <button class="close-button orange b" id="cl-b4" onclick=closeButton()>&times;</button>
+                        </form>
+                        <form action="" class="frm5 dn" id="f5">
+                            <label for="jobseekeremail5" class="flb b">Website ID:</label>
+                            <br>
+                            <input type="useremail" id="jobseekeremail5" name="jobseekeremail" class="finp bob shd" />
+                            <br><br>
+                            <label for="jspass5" class="flb b">Password:</label>
+                            <br>
+                            <input type="password" id="jspass5" name="seekerpassword" class="finp bob shd" />
+                            <br><br>
+                            <button class="fbtn b shd bob" id="f5s" type="submit">Submit</button>
+                            <button class="close-button orange b" id="cl-b5" onclick=closeButton()>&times;</button>
+                        </form>
+                        <form action="" class="frm6 dn" id="f6">
+                            <label for="jsname6" class="b">Name:</label>
+                            <input type="text" id="jsname6" name="jsname6" class="finp1 bob shd" />
+                            <br><br>
+                            <label for="jscontact6" class="b">Contact:</label>
+                            <input type="tel" id="jscontact6" name="jscontact" class="finp1 bob shd" />
+                            <br><br>
+                            <label for="jspassc6" class="b">Password:</label>
+                            <input type="password" id="jspassc6" name="jspassword6" class="finp1 bob shd" />
+                            <br><br>
+                            <label for="jsstate6" class="b">State:</label>
+                            <input type="text" id="jsstate6" name="jsstate6" class="finp1 bob shd">
+                            <label for="jsdist6" class="b">District:</label>
+                            <input type="text" id="jsdist6" name="jsdist6" class="finp1 bob shd">
+                            <br><br>
+                            <label for="jsct6" class="b">City:</label>
+                            <input type="text" id="jsct6" name="jsct6" class="finp1 bob shd">
+                            <label for="jspn6" class="b">Pincode:</label> 
+                            <input type="text" id="jspn6" name="jspn6" class="finp1 bob shd">
+                            <br><br>
+                            <label for="jscncl4" class="b">Councellor:</label>
+                            <input type="text" id="jscncl4" name="jscncl4" class="finp1 bob shd">
+                            <br><br>
+                            <button class="btn b shd bob" id="f6s" type="submit">Submit</button>
+                            <button class="close-button orange b" id="cl-b6" onclick=closeButton()>&times;</button>
+                        </form>
+                        <form action="" class="frm7 dn" id="f7">
+                            <label for="wid7" class="flb b">Website ID:</label>
+                            <input type="text" id="wid7" name="jswid7" class="finp2 bob shd" />
+                            <br><br>
+                            <label for="skills" class="b">Specify Skills (Seperated through comma):</label>
+                            <br>
+                            <textarea name="items" id="skills" rows="20" required class="finp1 bob shd ftxa"></textarea>
+                            <br><br>
+                            <button class="fbtn b shd bob" id="f7s" type="submit">Submit</button>
+                            <button class="close-button orange b" id="cl-b7" onclick=closeButton()>&times;</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="middlesection">
+        <main>
+            <div class="form-popup flex ct-f flex-column">
+                <div>
+                  <h1 class="font_20" id="gc-au-t">About Us</h1>
+                </div>
+                <div class="the_grid grid about_us font_15">
+                  <div class="grid_item shadow orange border_gray" id="item1">
+                    <h5>Welcome to Rojgar.com. We are devoted to serve our country by providing jobs to the people who don’t have a static income, who earn daily and who rely on any particular skill for feeding their families.</h5>
+                  </div>
+                  <div class="grid_item shadow blue border_gray" id="term1">
+                    <h5>Rojgar.com में आपका स्वागत है। हम उन लोगों को रोजगार प्रदान करने के लिए समर्पित हैं जिनकी आय स्थिर नहीं है, जो दैनिक कमाते हैं और जो अपने परिवार का भरण-पोषण करने के लिए किसी विशेष कौशल पर निर्भर हैं।</h5>
+                  </div>
+                  <div class="grid_item shadow orange border_gray" id="item3">
+                    <h5>We provide jobs like, Mechanics, Labors, Cook, Gardeners, Washmen, Cleaners, drivers, electricians, and many other jobs like these. And if you are searching for the people who can do these jobs then you are at a right place.</h5>
+                  </div>
+                  <div class="grid_item shadow blue border_gray" id="term4">
+                    <h5>हम मैकेनिक, मजदूर, रसोइया, माली, धोबी, सफाईकर्मी, ड्राइवर, इलेक्ट्रीशियन और इस तरह की कई अन्य नौकरियां प्रदान करते हैं। और अगर आप ऐसे लोगों की तलाश कर रहे हैं जो ये काम कर सकें तो आप सही जगह पर हैं।</h5>
+                  </div>
+                </div>
+            </div>
+    
+            <div class="grid_container flex-column flex ct-f margin_top_20" id="gr-ctn">
+                <div>
+                  <h1 class="font_20">Our Mission</h1>
+                </div>
+                <div class="grid our_mission the_grid">
+                    <div class="grid_item shadow blue border_gray" id="mis1">
+                        <div class="our_mission_text">
+                            <div><h3>Our most prominent mission is to increase the per capita income of a big part of the society who doesn’t have a static income. This includes Mechanics, Labors, Cooks, Gardeners, Washmen, Cleaners, drivers, electricians, and many other people like these. </h3><br><h3>"We don't just want to provide job. We want to make people happy."</h3></div>
+                        </div>
+                    </div>
+                    <div class="grid_item orange shadow border_gray" id="mis2">
+                        <div class="our_mission_text">
+                            <div><h3>हमारा सबसे प्रमुख मिशन समाज के उस बड़े हिस्से की प्रति व्यक्ति आय बढ़ाना है जिनकी आय स्थिर नहीं है। इसमें मैकेनिक, मजदूर, रसोइया, माली, धोबी, सफाईकर्मी, ड्राइवर, इलेक्ट्रीशियन और ऐसे कई अन्य लोग शामिल हैं।</h3><br><h3>"हम सिर्फ नौकरी नहीं देना चाहते. हम लोगों को खुशहाल बनाना चाहते हैं।"</h3></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="grid_container flex-column flex ct-f margin_top_20" id="gr-ctn-jc">
+                <div>
+                  <h1 class="font_20">Job Corner</h1>
+                </div>
+                <div class="the_grid grid job_corner the_grid">
+                  <div class="grid_item shadow jobs_text border_gray orange job_image" id="job1"><h2><i>Electrician/बिजली कारीगर</i></h2></div>
+                  <div class="grid_item shadow jobs_text border_gray blue job_image" id="job2"><h2><i>Cleaner/सफ़ाईवाला</i></h2></div>
+                  <div class="grid_item shadow jobs_text border_gray orange job_image" id="job3"><h2><i>Labour/मजदूर</i></h2></div>
+                  <div class="grid_item shadow jobs_text border_gray orange job_image" id="job4"><h2><i>Driver/चालक</i></h2></div>
+                  <div class="grid_item shadow jobs_text border_gray blue job_image" id="job5"><h2><i>Plumber/नल वाला</i></h2></div>
+                  <div class="grid_item shadow jobs_text border_gray orange job_image" id="job6"><h2><i>Servant/नौकर</i></h2></div>
+                  <div class="grid_item shadow jobs_text border_gray orange job_image" id="job7"><h2><i>Mechanic/मिस्त्री</i></h2></div>
+                  <div class="grid_item shadow jobs_text border_gray blue job_image" id="job8"><h2><i>Cheff/बावर्ची</i></h2></div>
+                  <div class="grid_item shadow jobs_text border_gray orange job_image" id="job9"><h2><i>Decor/सजानेवाला</i></h2></div>
+                </div>
+            </div>
+    
+            
+        </main>
+    </section>
+
+    <footer class="grid navyblue ct-f">
+        <div class="footer_grid_item first_footer_item">
+            <h1><u><b>Rojgar.com</b></u></h1>
+        </div>
+        <div class="footer_grid_item">
+            <ul class="unordered_list flex flex-column no_style_text bold ct-f">
+                <li><h3 class="font_15">Home</h3></li>
+                <li><h3 class="font_15">About Us</h3></li>
+                <li><h3 class="font_15">Our Mission</h3></li>
+                <li><h3 class="font_15">Job Corner</h3></li>
+                <li><h3 class="font_15">Reviews</h3></li>
+            </ul>
+        </div>
+        <div class="footer_grid_item" id="ftr-ctx">
+            <ul class="unordered_list flex flex-column no_style_text bold ct-f">
+                <li><h3 class="font_15">Contacts:</h3></li>
+                <li><h3 class="font_15">+91 6267596219</h3></li>
+                <li><h3 class="font_15">+91 8808722101</h3></li>
+                <li><h3 class="font_15">support@rojjgar.com</h3></li>
+            </ul>
+        </div>
+        <div class="footer_grid_item">
+            <ul class="unordered_list flex flex-column no_style_text bold ct-f">
+                <li><h3 class="font_15">Follow Us On:</h3></li>
+                <li><h3 class="font_15">Instagram</h3></li>
+                <li><h3 class="font_15">Facebook</h3></li>
+                <li><h3 class="font_15">X</h3></li>
+                <li><h3 class="font_15">Koo</h3></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../scripts/landingPage.js"></script>
+    <script type="module" src="../RojjgarFrontend.js"></script>
+</body>
+</html>

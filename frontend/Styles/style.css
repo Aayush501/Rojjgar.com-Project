@@ -1,0 +1,280 @@
+*{
+    margin : 0;
+    padding : 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-section{
+    height : 100vh;
+}
+
+
+.navbar {
+    height : 7%;
+    width : 100%;
+    background-color : #145c79;
+    grid-template-columns : 30% 20% 50%;
+}
+
+.nav1c{
+    font-size : 100%;
+}
+
+.nav3c{
+    gap: 5%;
+}
+
+.nav3cu{
+    margin: 10px;
+    grid-template-columns : 200px 200px 200px;
+    cursor:pointer;
+}
+
+.btn{
+    background-color: rgb(250, 150, 5);
+    color: black;
+    padding: 1% 1%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.fbtn{
+    background-color: rgb(250, 150, 5);
+    color: black;
+    padding: 3% 7%;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.img{
+    height : 93vh;
+    background-image : url("../assets/Designer (5)-fotor-rojjgar.png");
+    background-size: 100%;
+    background-repeat : no-repeat;
+}
+
+.fmc{
+    height : 50vh;
+    width : 70vh;
+    margin: 20vh 60vh;
+    background-color: #76b5c9;
+}
+
+.ufmc{
+    height : 50vh;
+    width : 70vh;
+    background-color: #76b5c9;
+}
+
+.mncnt{
+    margin: 5vh 18vh;
+    gap:20vh;
+}
+
+.secrcnt{
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.rgf1{
+    margin: 5px;
+}
+
+.lg1f{
+    gap: 10%;
+}
+
+.frm1{
+    padding: 20vh 0;
+}
+
+.frm2{
+    padding: 12vh 17vh;
+}
+
+.frm3{
+    padding: 12vh 17vh;
+}
+
+.frm4{
+    padding: 7vh 1vh;
+}
+
+.frm5{
+    padding: 12vh 17vh;
+}
+
+.frm6{
+    padding: 7vh 1vh;
+}
+
+.frm7{
+    padding: 12vh 10vh;
+}
+
+.ftxa{
+    height: 3vh;
+    width : 40vh;
+}
+
+.imgcnt{
+    height : 50%
+}
+
+.pflimg{
+    height: 60%;
+    border-radius : 50%;
+}
+
+.srchfrm{
+    padding:30px 25px;
+}
+
+.ivals{
+    margin: 30px 20px;
+    grid-template-rows : 50px 50px 50px;
+    grid-template-columns : 150px 150px 150px;
+}
+
+.navyblue{    background-color: #145c79;    }
+
+.orange{    background-color: rgb(250, 150, 5); }
+
+.no_style_text{ list-style: none;   }
+
+.blue{    background:#76b5c5;   }
+
+.flex-column{    flex-direction: column;    }
+
+.form-popup{    gap: 10%;   }
+
+.grid_container{    margin-top: 40px;   }
+
+.border_gray{    border: 2px solid gray; }
+
+.jobs_text{    font-size: 12px;    }
+
+.grid_item{    border-radius: 15px;    }
+
+.review_div_1{    border-radius: 10px 10px 0 0;    }
+
+.first_footer_item{    margin-top: 20%;    }
+
+/* Utility Classes */
+
+.full_height_width{
+    height: 100%;
+    width: 100%;
+}
+
+.close-button {
+    float: right;
+    font-size: 20px;
+    color: black;
+    padding: 5px 7px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.input{
+    height: 22px;
+    width: 300px;
+    border-radius: 10px; 
+}
+
+.the_grid{
+    gap: 20px;
+    margin: 30px;
+}
+
+.about_us{
+    grid-template-rows: repeat(2, 200px);
+    grid-template-columns: repeat(2, 400px); 
+    font-size: 20px;
+}
+
+.our_mission{
+    grid-template-rows: repeat(2, 130px);
+    grid-template-columns: repeat(1, 900px);
+    grid-gap: 20px;
+}
+
+.our_mission_text{
+    margin: 2%;
+    font-size: 15px;
+}
+
+.job_corner{
+    grid-template-rows: repeat(3, 180px);
+    grid-template-columns: repeat(3, 350px);
+}
+
+.job_image{
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 40%;
+}
+
+.marquee-content {
+    height: 100%;
+    grid-template-rows: repeat(1, 250px);
+    grid-template-columns: repeat(5, 250px);
+    grid-gap: 20px;
+}
+
+.review_div{
+    margin-top: 10px;
+    grid-template-rows: 20% 80%;
+}
+
+footer {
+    color: white;   
+    height: 200px;
+    padding: 5% 10%;
+    grid-template-rows: repeat(1, 100%);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 35px;
+}
+
+/* Class Selectors */
+
+/* ID Selectors */
+
+#gc-au-t{    font-size: 30px;    }
+
+#item1, #item3{    border: 1px solid rgb(15, 15, 15);   }
+
+#gr-ctn{    margin-top: 20px;   }
+
+#gr-ctn-jc{    margin-top: 20px;   }
+
+#job1{    background-image: url(../assets/rectangle-17@2x.png);   }
+
+#job4{    background-image: url(../assets/image-4@2x.png);    }
+
+#job7{    background-image: url(../assets/image-1@2x.png);    }
+
+#job2{    background-image: url(../assets/image-3@2x.png);    }
+
+#job5{    background-image: url(../assets/image-5@2x.png);    }
+
+#job8{    background-image: url(../assets/image-2@2x.png);    }
+
+#job3{    background-image: url(../assets/labour-day_10343981.png);   }
+
+#job6{    background-image: url(../assets/maid_12308110.png);    }
+
+#job9{    background-image: url(../assets/botanist_12337373.png);    }
+
+#rv-ctn{    margin: 20px 0 70px 0;  }
+
+/* ID Selectors */

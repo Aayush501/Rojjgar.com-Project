@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Page</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/utility.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <section class="top-section">
+        <nav class="navbar grid">
+            <div class="nav1c ct-b wh">
+                <h1><u><b>Rojjgar.com</b></u></h1>
+            </div>
+            <div class="nav2c"></div>
+            <div class="nav3cu grid">
+                <div></div>
+                <div class="imgcnt flex wh">
+                    <img src="../assets/unnamed1.png" alt="profile image" class="pflimg">
+                    <h1 id="rg1" class="b rgf1"></h1>
+                </div>
+                <div></div>
+            </div>
+        </nav> 
+
+        <main class="flex mncnt">
+            <div class="ufmc bob">
+                <div class="secrcnt flex fdc ct-f">
+                    <div class="flex">
+                        <h2>Name: </h2>
+                        <h2 id="rg2"></h2>
+                    </div>
+                    <div class="flex">
+                        <h3>Contact: </h3>
+                        <h3 id="rg3"></h3>
+                    </div>
+                    <div class="flex">
+                        <h3>State: </h3>
+                        <h3 id="rg4"></h3>
+                    </div>
+                    <div class="flex">
+                        <h3>District: </h3>
+                        <h3 id="rg5"></h3>
+                    </div>
+                    <div class="flex">
+                        <h3>City: </h3>
+                        <h3 id="rg6"></h3>
+                    </div>
+                    <div class="flex">
+                        <h3>Pincode:</h3>
+                        <h3 id="rg7"></h3>
+                    </div>
+                </div>
+                <form class="flex ct-f" id="uf-2">
+                    <button type="submit" class="fbtn b shd bob">See Job History</button>
+                </form>
+            </div>
+        </main>
+
+        <footer class="grid navyblue ct-f">
+            <div class="footer_grid_item first_footer_item">
+                <h1><u><b>Rojgar.com</b></u></h1>
+            </div>
+            <div class="footer_grid_item">
+                <ul class="unordered_list flex flex-column no_style_text bold ct-f">
+                    <li><h3 class="font_15">Home</h3></li>
+                    <li><h3 class="font_15">About Us</h3></li>
+                    <li><h3 class="font_15">Our Mission</h3></li>
+                    <li><h3 class="font_15">Job Corner</h3></li>
+                    <li><h3 class="font_15">Reviews</h3></li>
+                </ul>
+            </div>
+            <div class="footer_grid_item" id="ftr-ctx">
+                <ul class="unordered_list flex flex-column no_style_text bold ct-f">
+                    <li><h3 class="font_15">Contacts:</h3></li>
+                    <li><h3 class="font_15">+91 6267596219</h3></li>
+                    <li><h3 class="font_15">+91 8808722101</h3></li>
+                    <li><h3 class="font_15">support@rojjgar.com</h3></li>
+                </ul>
+            </div>
+            <div class="footer_grid_item">
+                <ul class="unordered_list flex flex-column no_style_text bold ct-f">
+                    <li><h3 class="font_15">Follow Us On:</h3></li>
+                    <li><h3 class="font_15">Instagram</h3></li>
+                    <li><h3 class="font_15">Facebook</h3></li>
+                    <li><h3 class="font_15">X</h3></li>
+                    <li><h3 class="font_15">Koo</h3></li>
+                </ul>
+            </div>
+        </footer>
+    </section>
+
+    <script type="module" src="../RojjgarFrontend.js"></script>
+    <script>
+        const responseData = sessionStorage.getItem('responseData');
+        console.log(responseData);
+        if (responseData) {
+            const responseObject = JSON.parse(responseData);
+            const name = responseObject.finduser.name || 'Key not found'; 
+            const contact = responseObject.finduser.contact || 'Key not found'; 
+            const state = responseObject.finduser.state || 'Key not found'; 
+            const district = responseObject.finduser.district || 'Key not found'; 
+            const city = responseObject.finduser.cityname || 'Key not found'; 
+            const pincode = responseObject.finduser.pincode || 'Key not found'; 
+            document.getElementById('rg1').textContent = name;
+            document.getElementById('rg2').textContent = name;
+            document.getElementById('rg3').textContent = contact;
+            document.getElementById('rg4').textContent = state;
+            document.getElementById('rg5').textContent = district;
+            document.getElementById('rg6').textContent = city;
+            document.getElementById('rg7').textContent = pincode;
+        } else {
+            document.getElementById('response').textContent = 'No response data found.';
+        }
+    </script>
+</body>
+</html>
